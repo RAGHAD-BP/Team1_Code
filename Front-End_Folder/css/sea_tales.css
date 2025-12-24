@@ -1,0 +1,137 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: ‘Poppins’, sans-serif;
+  }
+
+html, body {
+width: 100%;
+min-height: 100%;
+background: #16384c;
+}
+
+.container {
+width: min(1200px, 95%);
+margin: 0 auto;
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+padding: clamp(20px, 4vh, 30px);
+}
+
+.container .card {
+position: relative;
+max-width: min(300px, 90%);
+height: 215px;
+background-color: #FFF;
+margin: clamp(20px, 4vw, 30px) 10px;
+padding: 20px 15px;
+display: flex;
+flex-direction: column;
+box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+transition: 0.3s ease-in-out;
+border-radius: 10px;
+z-index: 1;
+}
+
+.container .card:hover {
+height: 420px;
+z-index: 10;
+}
+
+.container .card .imgBx {
+position: relative;
+width: min(230px, 90%);
+height: 220px;
+top: -65px;
+left: 50%;
+transform: translateX(-50%);
+z-index: 1;
+box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.container .card .imgBx img {
+display: block;
+max-width: 100%;
+border-radius: 10px;
+}
+
+.container .card .content {
+position: relative;
+margin-top: -140px;
+padding: 10px 5px;
+text-align: center;
+color: #111;
+visibility: hidden;
+opacity: 0;
+transition: 0.3s ease-in-out;
+font-size: clamp(12px, 2vw, 14px);
+}
+
+.container .card:hover .content {
+visibility: visible;
+opacity: 1;
+margin-top: -40px;
+transition-delay: 0.3s;
+}
+
+.back-arrow {
+font-size: clamp(24px, 5vw, 30px);
+color: white;
+text-decoration: none;
+position: absolute;
+top: 20px;
+left: 20px;
+z-index: 9999;
+}
+
+
+@media (max-width: 768px) {
+.container {
+width: 100%;
+padding: 15px;
+}
+
+
+.container .card {
+    max-width: 90%;
+    margin: 20px auto;
+}
+
+.container .card .imgBx {
+    width: 85%;
+    left: 50%;
+}
+
+
+}
+
+@media (max-width: 480px) {
+.container .card {
+max-width: 95%;
+height: 180px;
+}
+
+
+.container .card:hover {
+    height: 380px;
+}
+
+.container .card .imgBx {
+    width: 90%;
+    height: 180px;
+    top: -50px;
+}
+
+.container .card .content {
+    margin-top: -120px;
+}
+
+.container .card:hover .content {
+    margin-top: -30px;
+}
+
+
+}

@@ -1,0 +1,97 @@
+
+*  
+{
+    margin: 0;
+    padding: 0;
+    font-family: "Time New Roman", serif;
+}
+
+body
+{
+    background: #34495e;
+}
+
+.login-box
+{
+    width: 300px;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.5); /* غيرت هنا بس */ 
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 25px;
+    border: 1px solid #2ecc71;
+}
+
+.login-box h1
+{
+    color: white;
+    font-weight: 700;
+}
+
+
+.login-box input[type="text"], input[type="Password"]
+{
+    border: 0;
+    outline: 0;
+    background: none;
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+    border: 2px solid #3498db;
+    padding: 14px 10px;
+    width: 200px;
+    border-radius: 25px;
+    color: white;
+    transition: 0.5s;
+}
+
+.login-box input[type="text"]:focus, input[type="Password"]:focus
+{
+    width: 240px;
+    border-color: #2ecc71;
+}
+
+
+.login-box button
+{
+    border: 0;
+    outline: 0;
+    background: none;
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+    border: 2px solid #3498db;
+    padding: 14px 10px;  
+    width: 200px;        
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.login-box button:hover
+{
+    background: #2ecc71;
+}
+
+.login-box input::placeholder {
+    color:darkgray;
+}
+
+@media (max-width: 768px){
+    .login-box{
+        width: 90%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px){
+    .login-box{
+        width: 85%;
+        max-width: 300px;
+        padding: 35px;
+    }
+}
